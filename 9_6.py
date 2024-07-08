@@ -4,7 +4,7 @@ def getBinaryRep(n, numDigits):
     result = ""
     while n > 0:
         result = str(n%2) + result
-        n = n / 2
+        n = n//2
     if len(result) > numDigits:
         raise ValueError('not enough digits')
     for i in range(numDigits - len(result)):
