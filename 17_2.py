@@ -1,7 +1,7 @@
 import pylab
 from stddev import stdDev
 
-def getBMIData(filename):
+def getBMData(filename):
     """与えられたファイルの内容を読み込む
        0.氏名(string)、1.性別(string)、2.年齢(int)
        3.区分(走/車椅子)(int)、4.出身国(atring)
@@ -33,5 +33,5 @@ def makeHist(data, bins, title, xLabel, yLabel):
     pylab.annotate('Mean = ' + str(round(mean, 2)) + '\nSD = ' + str(round(std, 2)), fontsize = 20, xy = (0.65,0.75), xycoords='axes fraction')
     pylab.show()
 
-times = getBMIData('bm_results2012.txt')['time']
+times = getBMData('bm_results2012.txt')['time']
 makeHist(times, 20, '2012 Boston Marathon', 'Minutes to Complete Race', 'Number of Runners')
